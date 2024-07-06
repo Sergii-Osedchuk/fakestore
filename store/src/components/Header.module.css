@@ -1,0 +1,17 @@
+header {
+  background-color: #ed1c24;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.active {
+  color:#123454;
+
+}
+
+.notActive {
+  color: #fbfbfb;
+}
