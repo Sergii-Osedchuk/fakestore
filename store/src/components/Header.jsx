@@ -5,29 +5,30 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <ul>
+        <ul className={classes.list}>
           <li>
             <NavLink to='/' className={({isActive}) => 
-            isActive ? classes.active : classes.notActive}>Home</NavLink>
+            isActive ? classes.active : undefined}>Home</NavLink>
           </li>
           <li>
-            <NavLink to='/' className={({isActive}) => 
-            isActive ? classes.active : classes.notActive}>Men`s clothing</NavLink>
+            <NavLink to='/man' className={({isActive}) => 
+            isActive ? classes.active : undefined}>Men`s clothing</NavLink>
           </li>
           <li>
-            <NavLink to='/' className={({isActive}) => 
-            isActive ? classes.active : classes.notActive}>Women`s clothing</NavLink>
+            <NavLink to='/woman' className={({isActive}) => 
+            isActive ? classes.active : undefined}>Women`s clothing</NavLink>
           </li>
           <li>
-            <NavLink to='/' className={({isActive}) => 
-            isActive ? classes.active : classes.notActive}>Jewellery</NavLink>
+            <NavLink to='/jewellery' className={({isActive}) => 
+            isActive ? classes.active : undefined}>Jewellery</NavLink>
           </li>
           <li>
-            <NavLink to='/' className={({isActive}) => 
-            isActive ? classes.active : classes.notActive}>Electronics</NavLink>
+            <NavLink to='/electronics' className={({isActive}) => 
+            isActive ? classes.active : undefined}>Electronics</NavLink>
           </li>
           <li>
-            <NavLink to='/contacts'>Contacts</NavLink>
+            <NavLink to='/contacts' className={({isActive}) => 
+            isActive ? classes.active : undefined}>Contacts</NavLink>
           </li>
         </ul>
       </nav>

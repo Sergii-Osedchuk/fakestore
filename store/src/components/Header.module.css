@@ -1,17 +1,31 @@
 header {
   background-color: #ed1c24;
+  height: 80px;
 }
 
 nav {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
 }
 
-.active {
-  color:#123454;
-
+.list {
+  display: flex;
 }
 
-.notActive {
+.list:first-child {
+  padding-left: 0px;
+}
+
+.list a{
+  text-decoration: none;
+  padding-left: 20px;
+  font-size: 14px;
   color: #fbfbfb;
+}
+
+.list a.active,
+.list a:hover {
+  color:#bbbbbb;
 }

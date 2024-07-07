@@ -1,6 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from './components/RootLayout';
 import Contacts from './pages/Contants';
+import Electronics from './pages/Electronics';
+import Man from './pages/Man';
+import Woman from './pages/Woman';
+import Jewellery from './pages/Jewellery';
 
 function App() {
   const router = createBrowserRouter([
@@ -13,8 +17,19 @@ function App() {
           element: <h2>LISA</h2>
         },
         {
-          path: '/products',
-          element: <h2>LISA is my daughter</h2>
+          path: '/electronics',
+          element: <Electronics />
+        },
+        {
+          path: '/man',
+          element: <Man />
+        },
+        {
+          path: '/woman',
+          element: <Woman />
+        },{
+          path: '/jewellery',
+          element: <Jewellery />
         },
         {
           path: '/contacts',
