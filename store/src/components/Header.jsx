@@ -1,7 +1,14 @@
 import { NavLink } from "react-router-dom";
+import { useState } from 'react';
 import classes from './Header.module.css';
+import Cart from "./Cart";
 
-const Header = ({items}) => {
+const Header = ({items, onIncrement, onDecrement}) => {
+  const [showCart, setShowCart] = useState(false);
+
+  const onCartHandler = () => {
+    setShowCart(!showCart);
+  }
   return (
     <header>
       <div>
@@ -33,7 +40,8 @@ const Header = ({items}) => {
             </li>
           </ul>
         </nav>
-        <div>{items.length}</div>
+        <div onClick = {onCartHandler}>{items.length}</div>
+        {showCart && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement}/>}
       </div>
     </header>
   )

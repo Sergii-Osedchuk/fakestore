@@ -22,8 +22,6 @@ const Electronics = () => {
     }
   }
 
-  console.log(items)
-
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/electronics")
       .then(res => res.json())
