@@ -1,13 +1,17 @@
 import { Outlet } from "react-router-dom";
-import Header from './Header'
+import { useState } from 'react';
+import Header from './Header';
 
 const RootLayout = () => {
+  const [items, setItems] = useState([]);
+
   return (
     <>
-      <Header />
+      <Header items={items}/>
       <main>
-        <Outlet />
+        <Outlet context={[items, setItems]}/>
       </main>
+      {/* <Footer /> */}
     </>
   )
 }

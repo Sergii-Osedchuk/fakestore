@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  position: sticky;
+  bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: #ed1c24;
+  color: #fbfbfb;
+  margin: auto;
+}
+
+.container {
+  position: absolute;
+}
