@@ -1,4 +1,4 @@
-const Cart = ({items, onIncrement, onDecrement}) => {
+const Cart = ({items, onIncrement, onDecrement, onDelete}) => {
   const onTotal = () => {
     let summ = 0;
     items.forEach(item => summ += item.quantity * item.price);
@@ -21,20 +21,23 @@ const Cart = ({items, onIncrement, onDecrement}) => {
           {items.map(item => (
             <li key={item.id}>
               <h2>{item.title}</h2>
-              <p>{item.price}</p>
+              <p>{item.price} $</p>
               <p><img src={item.image} alt={item.title}/></p>
               <div>
                 <button onClick={() => onIncrement(item.id)}>+</button>
                 <p>{item.quantity}</p>
                 <button onClick={() => onDecrement(item.id)}>-</button>
                 <p>Total price {item.price*item.quantity}$</p>
-                <p>Del</p>
+                <p onClick={() => onDelete(item.id)}>Del</p>
               </div>
             </li>
           ))}
         </ul>
         <p>Total quantity {onTotalQuantity()}</p>
         <p>Total amount {onTotal()}</p>
+        <p>
+          <button>Proceed to checkout</button>
+        </p>
       </div>
     </div>
   )

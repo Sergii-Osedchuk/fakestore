@@ -3,7 +3,7 @@ import { useState } from 'react';
 import classes from './Header.module.css';
 import Cart from "./Cart";
 
-const Header = ({items, onIncrement, onDecrement}) => {
+const Header = ({items, onIncrement, onDecrement, onDelete}) => {
   const [showCart, setShowCart] = useState(false);
 
   const onCartHandler = () => {
@@ -41,7 +41,7 @@ const Header = ({items, onIncrement, onDecrement}) => {
           </ul>
         </nav>
         <div onClick = {onCartHandler}>{items.length}</div>
-        {showCart && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement}/>}
+        {showCart && items.length > 0 && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete}/>}
       </div>
     </header>
   )

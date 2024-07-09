@@ -21,9 +21,13 @@ const RootLayout = () => {
    
   }
 
+  const onDelete = (id) => {
+    setItems(prev => prev.filter(item => item.id !== id));
+  }
+
   return (
     <>
-      <Header items={items} onIncrement={onIncrement} onDecrement={onDecrement}/>
+      <Header items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete}/>
       <main>
         <Outlet context={[items, setItems]}/>
       </main>
