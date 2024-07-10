@@ -41,9 +41,9 @@ const Header = ({items, onIncrement, onDecrement, onDelete}) => {
             </li>
           </ul>
           <MdOutlineShoppingCart onClick={onCartHandler} style={{ color: "white", marginLeft: '300px', fontSize:'20px', cursor: 'pointer'}} />
-          <div onClick = {onCartHandler}>{items.length}</div>
+          <div onClick = {onCartHandler} className={classes.length}>{items.length}</div>
         </nav>
-        {showCart && items.length > 0 && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete}/>}
+        {showCart && items.length > 0 && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete} onCartHandler={onCartHandler}/>}
       </div>
     </header>
   )

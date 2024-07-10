@@ -1,0 +1,149 @@
+.wraper {
+  background: white;
+  width: 50vw;
+  min-height: 25vw;
+  position: absolute;
+  border: 0.2rem solid black;
+  border-radius: 0.5rem;
+  top: 20%;
+  left: 30%;
+}
+
+.modal {
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cartItem {
+  display: flex;
+  width: 730px;
+  border-bottom: 2px solid gray;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  padding-top: 22px;
+}
+
+.title {
+  font-size: 12px;
+  text-align: center;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5em;
+  padding-right: 5em;
+  font-size: 10px;
+  padding-bottom: 20px;
+}
+
+.buttonWraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.picture {
+  width: 40px;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.price {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.total {
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.proceed {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #ed1c24;
+  border: none;
+}
+
+.proceed:hover {
+  color: white;
+  background-color: #ed1c24;
+}
+
+.proceed:active {
+  background-color: gray;
+}
+
+.totalWraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.delete {
+  width: 60px;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete:hover {
+  background-color: #ed1c24;
+  color: white;
+}
+
+.buttons {
+  font-weight: 600;
+}
+
+.value {
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.quantity {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.close {
+  font-weight: 600;
+  color: white;
+  background-color: #ed1c24;
+  border: none;
+  border-radius: 5px;
+}
+
+.close:hover {
+  background-color: #bbbbbb;
+}
