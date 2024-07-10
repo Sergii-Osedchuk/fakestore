@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import Item from '../components/Item';
-import classes from './Electronics.module.css';
+import classes from './Products.module.css';
 
-const Electronics = () => {
-  const [devices, setDevices] = useState([]);
+const Products = ({category}) => {
+  const [products, setProducts] = useState([]);
   const [items, setItems] = useOutletContext([]);
 
   const onAddItem = (item) => {
-    const newItemIndex = devices.findIndex(device => device.id === item.id);
+    const newItemIndex = products.findIndex(device => device.id === item.id);
 
-    const newIndex = items.findIndex(item => item.id === devices[newItemIndex].id);
+    const newIndex = items.findIndex(item => item.id === products[newItemIndex].id);
 
     if (newIndex === -1) {
-      const newItem = devices[newItemIndex];
+      const newItem = products[newItemIndex];
       newItem.quantity = 1;
       setItems(prev => [...prev, newItem])
     } 
@@ -23,14 +23,14 @@ const Electronics = () => {
   }
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/category/electronics")
+    fetch(`https://fakestoreapi.com/products/category/${category}`)
       .then(res => res.json())
-      .then(json => setDevices(json));
-  }, []);
+      .then(json => setProducts(json));
+  }, [category]);
 
   return (
     <ul className={classes.goods}>
-      {devices.map(item => <Item 
+      {products.map(item => <Item 
           key={item.id} 
           title={item.title}
           price={item.price}
@@ -42,4 +42,4 @@ const Electronics = () => {
   )
 }
 
-export default Electronics;
+export default Products;

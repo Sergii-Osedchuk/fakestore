@@ -1,10 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from './components/RootLayout';
 import Contacts from './pages/Contants';
-import Electronics from './pages/Electronics';
-import Man from './pages/Man';
-import Woman from './pages/Woman';
-import Jewellery from './pages/Jewellery';
+import Products from './pages/Products';
 
 function App() {
   const router = createBrowserRouter([
@@ -18,18 +15,18 @@ function App() {
         },
         {
           path: '/electronics',
-          element: <Electronics />
+          element: <Products category='electronics'/>
         },
         {
           path: '/man',
-          element: <Man />
+          element: <Products category="men's%20clothing" />
         },
         {
           path: '/woman',
-          element: <Woman />
+          element: <Products category="women's%20clothing" />
         },{
           path: '/jewellery',
-          element: <Jewellery />
+          element: <Products category='jewelery' />
         },
         {
           path: '/contacts',

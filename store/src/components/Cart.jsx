@@ -1,4 +1,5 @@
 const Cart = ({items, onIncrement, onDecrement, onDelete}) => {
+  
   const onTotal = () => {
     let summ = 0;
     items.forEach(item => summ += item.quantity * item.price);

@@ -40,7 +40,7 @@ const Header = ({items, onIncrement, onDecrement, onDelete}) => {
               isActive ? classes.active : undefined}>Contacts</NavLink>
             </li>
           </ul>
-          <MdOutlineShoppingCart onClick={onCartHandler} style={{ color: "white", marginLeft: '300px', fontSize:'20px'}} />
+          <MdOutlineShoppingCart onClick={onCartHandler} style={{ color: "white", marginLeft: '300px', fontSize:'20px', cursor: 'pointer'}} />
           <div onClick = {onCartHandler}>{items.length}</div>
         </nav>
         {showCart && items.length > 0 && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete}/>}
