@@ -6,20 +6,29 @@ const RootLayout = () => {
   const [items, setItems] = useState([]);
 
   const onIncrement = (id) => {
-    let copyItems = [];
+    let newItems = [];
 
     items.forEach(item => {
       if(item.id === id) {
         item.quantity += 1;
       }
-      copyItems.push(item);
+      newItems.push(item);
     });
-    setItems(copyItems);
+    setItems(newItems);
   };
 
   const onDecrement = (id) => {
-   
-  }
+    let newItems = [];
+
+    items.forEach(item => {
+      if(item.id === id) {
+        item.quantity -= 1;
+      }
+      newItems.push(item);
+    });
+    newItems = newItems.filter(item => item.quantity !== 0);
+    setItems(newItems);
+  } 
 
   const onDelete = (id) => {
     setItems(prev => prev.filter(item => item.id !== id));
@@ -27,7 +36,12 @@ const RootLayout = () => {
 
   return (
     <>
-      <Header items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete}/>
+      <Header 
+        items={items} 
+        onIncrement={onIncrement} 
+        onDecrement={onDecrement} 
+        onDelete={onDelete}
+      />
       <main>
         <Outlet context={[items, setItems]}/>
       </main>

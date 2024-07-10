@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 import classes from './Header.module.css';
 import Cart from "./Cart";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const Header = ({items, onIncrement, onDecrement, onDelete}) => {
   const [showCart, setShowCart] = useState(false);
@@ -39,8 +40,9 @@ const Header = ({items, onIncrement, onDecrement, onDelete}) => {
               isActive ? classes.active : undefined}>Contacts</NavLink>
             </li>
           </ul>
+          <MdOutlineShoppingCart onClick={onCartHandler} style={{ color: "white", marginLeft: '300px', fontSize:'20px'}} />
+          <div onClick = {onCartHandler}>{items.length}</div>
         </nav>
-        <div onClick = {onCartHandler}>{items.length}</div>
         {showCart && items.length > 0 && <Cart items={items} onIncrement={onIncrement} onDecrement={onDecrement} onDelete={onDelete}/>}
       </div>
     </header>

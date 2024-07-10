@@ -32,7 +32,7 @@ img {
 .add {
   width: 120px;
   height: 40px;
-  background-color: brown;
+  background-color: #ed1c24;
   border: none;
   border-radius: 10px;
   text-align: center;
@@ -40,7 +40,17 @@ img {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 600;
-  color:aliceblue
+  color:aliceblue;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: #bbbbbb;
+  color: #ed1c24;
+}
+
+.add:active {
+  background-color: white;
 }
 
 .title {
