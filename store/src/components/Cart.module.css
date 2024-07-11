@@ -33,11 +33,12 @@
   height: 60px;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 22px;
-  padding-top: 22px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .title {
+  width: 200px;
   font-size: 12px;
   text-align: center;
 }
@@ -50,16 +51,19 @@
   padding-right: 5em;
   font-size: 10px;
   padding-bottom: 20px;
+  padding-top: 16px;
 }
 
 .buttonWraper {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-left: 10px;
 }
 
 .picture {
-  width: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 button {
@@ -81,7 +85,7 @@ button {
 }
 
 .proceed {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   text-align: center;
   width: 100px;

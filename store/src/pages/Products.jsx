@@ -22,23 +22,31 @@ const Products = ({category}) => {
     }
   }
 
+  let url = `https://fakestoreapi.com/products/category/${category}`;
+
+  if (!category) {
+    url = 'https://fakestoreapi.com/products/';
+  }
+
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/category/${category}`)
+    fetch(url)
       .then(res => res.json())
       .then(json => setProducts(json));
-  }, [category]);
+  }, [url]);
 
   return (
-    <ul className={classes.goods}>
-      {products.map(item => <Item 
-          key={item.id} 
-          title={item.title}
-          price={item.price}
-          image={item.image}
-          item={item}
-          onAddItem={onAddItem}
-        />)}
-    </ul>
+    <>
+      <ul className={classes.goods}>
+        {products.map(item => <Item 
+            key={item.id} 
+            title={item.title}
+            price={item.price}
+            image={item.image}
+            item={item}
+            onAddItem={onAddItem}
+          />)}
+      </ul>
+    </>
   )
 }
 

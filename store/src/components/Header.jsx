@@ -20,6 +20,10 @@ const Header = ({items, onIncrement, onDecrement, onDelete}) => {
               isActive ? classes.active : undefined}>Home</NavLink>
             </li>
             <li>
+              <NavLink to='/products' className={({isActive}) => 
+              isActive ? classes.active : undefined}>All products</NavLink>
+            </li>
+            <li>
               <NavLink to='/man' className={({isActive}) => 
               isActive ? classes.active : undefined}>Men`s clothing</NavLink>
             </li>

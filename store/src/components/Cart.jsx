@@ -32,9 +32,9 @@ const Cart = ({items, onIncrement, onDecrement, onDelete, onCartHandler}) => {
                 <p className={classes.price}>Price {item.price}$</p>
                 <p><img src={item.image} alt={item.title} className={classes.picture}/></p>
                 <div className={classes.buttonWraper}>
-                  <button onClick={() => onIncrement(item.id)} className={classes.buttons}>+</button>
-                  <p className={classes.quantity}>{item.quantity}</p>
                   <button onClick={() => onDecrement(item.id)} className={classes.buttons}>-</button>
+                  <p className={classes.quantity}>{item.quantity}</p>
+                  <button onClick={() => onIncrement(item.id)} className={classes.buttons}>+</button>
                   <p className={classes.value}>Total value {(item.price*item.quantity).toFixed(2)}$</p>
                   <button onClick={() => onDelete(item.id)} className={classes.delete}>Delete</button>
                 </div>
@@ -47,7 +47,7 @@ const Cart = ({items, onIncrement, onDecrement, onDelete, onCartHandler}) => {
               <p>Total price of all products - {(onTotal()).toFixed(2)} $</p>
             </div>
             <p>
-              <button className={classes.proceed}>Buy</button>
+              <button className={classes.proceed}>Make an order</button>
             </p>
           </div>
         </div>
