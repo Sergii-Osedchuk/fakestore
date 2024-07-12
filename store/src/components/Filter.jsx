@@ -6,7 +6,7 @@ const Filter = ({inputValue, onChangeHandler}) => {
     <div className={styles.wraper}>
       <label htmlFor="search" className={styles.label}>Find your product</label>
       <input 
-        type='text' 
+        type='search' 
         id='search' 
         value = {inputValue} 
         onChange={onChangeHandler}
