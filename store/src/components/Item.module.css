@@ -1,17 +1,5 @@
-.goods {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: 1fr;
-  /* flex-wrap: wrap;
-  justify-content: center; */
-  /* align-items: center; */
-  gap: 30px;
-  padding-top: 60px;
-}
-
 .good {
   display: flex;
-  /* flex-basis: 100%; */
   flex-direction: column;
   width: 240px;
   text-align: center;
@@ -26,7 +14,12 @@ img {
   height: 200px;
   object-fit: contain;
   padding: 20px;
-  
+  cursor: pointer;
+  transition: all 0.7s ;
+}
+
+.good img:hover {
+  scale: 1.2;
 }
 
 .add {
@@ -42,15 +35,18 @@ img {
   font-weight: 600;
   color:aliceblue;
   cursor: pointer;
+  transition: all 0.7s;
 }
 
 .add:hover {
   background-color: #bbbbbb;
-  color: #ed1c24;
+  color: white;
+  scale: 1.2;
 }
 
 .add:active {
   background-color: white;
+  color: #ed1c24;
 }
 
 .title {

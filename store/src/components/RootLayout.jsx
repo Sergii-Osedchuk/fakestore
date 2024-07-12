@@ -4,6 +4,11 @@ import Header from './Header';
 
 const RootLayout = () => {
   const [items, setItems] = useState([]);
+  const [showCart, setShowCart] = useState(false);
+
+  const onCartHandler = () => {
+    setShowCart(!showCart);
+  }
 
   const onIncrement = (id) => {
     let newItems = [];
@@ -27,11 +32,15 @@ const RootLayout = () => {
       newItems.push(item);
     });
     newItems = newItems.filter(item => item.quantity !== 0);
+    newItems.length === 0 && setShowCart(false);
     setItems(newItems);
-  } 
+    }
 
   const onDelete = (id) => {
-    setItems(prev => prev.filter(item => item.id !== id));
+    const newItems = items.filter(item => item.id !== id);
+    newItems.length === 0 && setShowCart(false);
+    setItems(newItems);
+    
   }
 
   return (
@@ -41,6 +50,8 @@ const RootLayout = () => {
         onIncrement={onIncrement} 
         onDecrement={onDecrement} 
         onDelete={onDelete}
+        onCartHandler={onCartHandler}
+        showCart={showCart}
       />
       <main>
         <Outlet context={[items, setItems]}/>

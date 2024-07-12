@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import Item from '../components/Item';
-import classes from './Products.module.css';
+import styles from './Products.module.css';
 
 const Products = ({category}) => {
   const [products, setProducts] = useState([]);
@@ -36,7 +36,7 @@ const Products = ({category}) => {
 
   return (
     <>
-      <ul className={classes.goods}>
+      <ul className={styles.goods}>
         {products.map(item => <Item 
             key={item.id} 
             title={item.title}
