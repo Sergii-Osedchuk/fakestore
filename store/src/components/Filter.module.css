@@ -1,0 +1,19 @@
+.wraper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  margin-right: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.input {
+  width: 300px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: 2px solid #bbbbbb;
+}

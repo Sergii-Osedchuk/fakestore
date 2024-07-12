@@ -40,7 +40,6 @@ const RootLayout = () => {
     const newItems = items.filter(item => item.id !== id);
     newItems.length === 0 && setShowCart(false);
     setItems(newItems);
-    
   }
 
   return (
@@ -56,7 +55,6 @@ const RootLayout = () => {
       <main>
         <Outlet context={[items, setItems]}/>
       </main>
-      {/* <Footer /> */}
     </>
   )
 }

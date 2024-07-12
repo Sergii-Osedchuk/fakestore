@@ -12,13 +12,19 @@
 }
 
 .contactWraper {
-  margin-right: 260px;
+  margin-right: 300px;
+  margin-top: 50px;
 }
 
 .logo {
   width: 50px;
   height: 50px;
   padding: 0;
+}
+
+.logos {
+  display: flex;
+  margin-top: 20px;
 }
 
 .link {
@@ -30,10 +36,12 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .phone {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 10px;
+  padding-left: 10px;
 }

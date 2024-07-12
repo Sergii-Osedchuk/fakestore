@@ -2,10 +2,19 @@ import { useState, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import Item from '../components/Item';
 import styles from './Products.module.css';
+import Filter from '../components/Filter';
 
 const Products = ({category}) => {
   const [products, setProducts] = useState([]);
   const [items, setItems] = useOutletContext([]);
+  const [inputValue, setInputValue] = useState('');
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  
+  const inputHandler = (event) => {
+    setInputValue(event.target.value);
+    setFilteredProducts(products.filter(product => product.title.toLowerCase().includes(inputValue.trim().toLowerCase())));
+  }
 
   const onAddItem = (item) => {
     const newItemIndex = products.findIndex(device => device.id === item.id);
@@ -28,16 +37,20 @@ const Products = ({category}) => {
     url = 'https://fakestoreapi.com/products/';
   }
 
-  useEffect(() => {
-    fetch(url)
-      .then(res => res.json())
-      .then(json => setProducts(json));
-  }, [url]);
+    useEffect(() => {
+      fetch(url)
+        .then(res => res.json())
+        .then(json => {
+          setProducts(json)
+          setFilteredProducts(json)});
+      }, [url]);
+
 
   return (
     <>
+      <Filter inputValue={inputValue} onChangeHandler={inputHandler}/>
       <ul className={styles.goods}>
-        {products.map(item => <Item 
+        {filteredProducts.map(item => <Item 
             key={item.id} 
             title={item.title}
             price={item.price}
