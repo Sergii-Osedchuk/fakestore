@@ -13,6 +13,10 @@ const Slider = () => {
     const images = [picture1, picture2, picture3];
     const navigate = useNavigate();
 
+    const moto = [<pre>"Your Style, Your Story: Wear it Proud."</pre>, 
+      <pre>"Style As Unique As You:<br/> Embrace Individuality."</pre>, 
+      <pre>"We know what you are looking for, <br/> go shoping with us."</pre>];
+
   return (
     <section className={styles.wraper}>
       <Swiper
@@ -30,7 +34,6 @@ const Slider = () => {
         }}
         autoplay
       >
-        
         {images.map((img, index) => (
           <SwiperSlide key={index}>
             <div onClick={() => navigate('products')}>
@@ -39,6 +42,7 @@ const Slider = () => {
                 alt={`slide-${index + 1}`}
                 className={styles.image}
               />
+              <div className={`${styles.moto}`}>{moto[index]}</div>
             </div>
           </SwiperSlide>
         ))}

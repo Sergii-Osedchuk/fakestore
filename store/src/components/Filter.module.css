@@ -14,6 +14,10 @@
   width: 300px;
   height: 20px;
   border-radius: 5px;
+  text-indent: 20px;
   border: none;
-  outline: 2px solid #bbbbbb;
+  outline: 2px solid lightcoral;
+  background-image: url(../images/search-icon.png);
+  background-position: 1px 1px;
+  background-repeat: no-repeat;
 }
