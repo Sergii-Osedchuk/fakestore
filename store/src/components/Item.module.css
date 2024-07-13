@@ -6,6 +6,9 @@
   border: 1px dotted rgb(197, 192, 183);
   border-radius: 10px;
   background-color: white;
+  border: 1px solid #bbbbbb;
+  box-shadow: 8px 5px 5px gray;
+
 }
 
 img {

@@ -15,7 +15,7 @@ const Slider = () => {
 
     const moto = [<pre>"Your Style, Your Story: Wear it Proud."</pre>, 
       <pre>"Style As Unique As You:<br/> Embrace Individuality."</pre>, 
-      <pre>"We know what you are looking for, <br/> go shoping with us."</pre>];
+      <pre>"We know what you are looking for, <br/> do shoping with us."</pre>];
 
   return (
     <section className={styles.wraper}>
