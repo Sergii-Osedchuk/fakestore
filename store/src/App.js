@@ -4,7 +4,7 @@ import Contacts from './pages/Contacts';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import ErrorPage from './pages/ErrorPage';
-
+import Slider from './pages/Slider';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
       children: [
         {
           path: '/',
-          element: <h2>LISA</h2>,
+          element: <Slider />,
         },
         {
           path: `/products/:productId`,
