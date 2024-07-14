@@ -1,6 +1,9 @@
 import styles from './Cart.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({items, onIncrement, onDecrement, onDelete, onCartHandler}) => {
+
+  const navigate = useNavigate();
 
   const onTotal = () => {
     let summ = 0;
@@ -16,12 +19,17 @@ const Cart = ({items, onIncrement, onDecrement, onDelete, onCartHandler}) => {
     return quantity;
   }
 
+  const onSubmitHandler = () => {
+    onCartHandler();
+    navigate('/submit');
+  }
+
   return (
     <>
       <div className={styles.modal} onClick={onCartHandler}></div>
       <div className={styles.wraper}>
         <div className={styles.titleWrapper}>
-          <h2>You chose this products</h2>
+          <h2>You chose these products</h2>
           <button onClick={onCartHandler} className={styles.close}>X</button>
         </div>
         <div>
@@ -47,7 +55,7 @@ const Cart = ({items, onIncrement, onDecrement, onDelete, onCartHandler}) => {
               <p>Total price of all products - {(onTotal()).toFixed(2)} $</p>
             </div>
             <p>
-              <button className={styles.proceed}>Make an order</button>
+              <button className={styles.proceed} onClick={onSubmitHandler}>Make an order</button>
             </p>
           </div>
         </div>

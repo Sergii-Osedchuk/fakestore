@@ -5,6 +5,8 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import ErrorPage from './pages/ErrorPage';
 import Slider from './pages/Slider';
+import SubmitPage from './pages/SubmitPage';
+import Final from './pages/Final';
 
 function App() {
 
@@ -44,6 +46,14 @@ function App() {
         {
           path: '/contacts',
           element: <Contacts />
+        },
+        {
+          path: '/submit',
+          element: <SubmitPage />
+        }, 
+        {
+          path: '/final',
+          element: <Final />
         }
       ]
     }

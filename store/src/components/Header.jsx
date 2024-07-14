@@ -12,7 +12,7 @@ const Header = ({items, onIncrement, onDecrement, onDelete, showCart, onCartHand
           <ul className={styles.list}>
             <li>
               <NavLink to='/' className={({isActive}) => 
-              isActive ? styles.active : undefined}>About</NavLink>
+              isActive ? styles.active : undefined}>Our vibe</NavLink>
             </li>
             <li>
               <NavLink to='/products' className={({isActive}) => 

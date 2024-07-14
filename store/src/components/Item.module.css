@@ -44,7 +44,6 @@ img {
 .add:hover {
   background-color: #bbbbbb;
   color: white;
-  scale: 1.2;
 }
 
 .add:active {
